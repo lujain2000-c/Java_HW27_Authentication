@@ -35,7 +35,6 @@ public class ConfigurationSecurity {
                 .authenticationProvider(daoAuthenticationProvider())
                 .authorizeHttpRequests()
                 .requestMatchers(HttpMethod.POST,"/api/v1/auth/register").permitAll()
-                .requestMatchers ("/api/vi/auth/admin").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .logout().logoutUrl("/api/vi/auth/logout")
